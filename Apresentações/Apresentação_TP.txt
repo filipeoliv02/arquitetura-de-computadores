@@ -1,0 +1,10 @@
+Estrutura e operação de um computador moderno com foco na programação do micro-processador (Tecnologia MIPS -> RISC)
+
+Avaliação:
+3/11 e 12/1
+
+Nota Final = (Teste1 + Teste2 + Prática) / 3
+
+Bibliografia:
+Computer Architecture
+Petterson & Hennessy

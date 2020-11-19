@@ -1,0 +1,10 @@
+Arquitetura de Computadores PL
+
+Alessandro Moreira
+afmoreira@ufp.edu.pt
+
+Avaliação-> Quizzes
+
+Ferramentas
+ ->Mars
+ ->Java
