@@ -9,7 +9,7 @@
 CONVERT:
   lw $t0, 0($a0)  # input = t0
   mtc1 $t0, $f3
-  cvts.s.w $f3, $f3
+  cvt.s.w $f3, $f3
   lwc1 $f0, ZERO  # result = $f0
   lwc1 $f2 , TWO
   add $t2, $0, $0 # i = t2
@@ -19,7 +19,7 @@ CONVERT:
     bge $t2, 6, END_LOOP1
     lw $t5, 0($t4)
     mtc1 $t5, $f1
-    cvts.s.w $f1, $f1
+    cvt.s.w $f1, $f1
     mul.s $f0, $f1, $f2
     add.s $f0, $f0, $f3
     sll $t5, $t2, 2
@@ -34,13 +34,13 @@ CONVERT:
 FOO:
   lw $t0, 0($a0)
   mtc1 $t0, $f0
-  cvts.s.w $f0, $f0
+  cvt.s.w $f0, $f0
   lw $t1, 0($a1)
   mtc1 $t1, $f1
-  cvts.s.w $f1, $f1
+  cvt.s.w $f1, $f1
   lw $t2, 0($a2)
   mtc1 $t2, $f2
-  cvts.s.w $f2, $f2
+  cvt.s.w $f2, $f2
   lwc1 $f3, ZERO
   lwc1 $f4, ZERO
   mul.s $f3, $f0, $f1
@@ -65,14 +65,14 @@ MAIN:
   jal FOO
   lw $v0, 0($t0)
   mtc1 $v0, $f1
-  cvts.s.w $f1, $f1
+  cvt.s.w $f1, $f1
   li $v0, 6
   syscall
   swc1 $f1, 0($a0)
   jal CONVERT
   lw $v0, 0($t0)
   mtc1 $v0, $f2
-  cvts.s.w $f2, $f2
+  cvt.s.w $f2, $f2
   add.s $f12, $f1, $0
   li $v0, 2
   syscall
