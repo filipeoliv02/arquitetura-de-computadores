@@ -1,0 +1,112 @@
+Representação de Instruções no MIPS (Conclusão)
+
+Tipo R (instruções com 3 registos) -> opcode é 0
+
+Tipo I (instruções com constantes) -> opcode !=0
+
+addi $t0,$t0, -1
+
+opcode=001000 (8)
+Rs=01000 (8)			0x2108FFFF
+Rt=01000 (8)				
+Imm=0xFFFF (-1)
+
+sw $t0, -4($t1) -> tipo I em que o Imm=-4
+
+Para hoje: saltos condicionais beq, bne são do tipo I
+
+loop: ------
+      ------
+      ------
+      ------
+      beq $to, $0, loop
+PC->  ------
+
+
+ opcode: 000100 (4)
+ Rs ($t0): 01000 (8)
+ Rt ($0): 00000 (0)
+ Imm: O número de instruções a saltar para atingir a label de destino a contar na instrução a seguir ao salto condicional.
+
+ -5 ...... -> 0.....0101  (5)
+              1.....1010  (5)´
+                       1
+              1.....1011   (-5)
+
+              FFFB
+
+              código máquina: 0x1100FFFB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Instruções do tipo J: (J, JAL)
+
+
+ opcode 6 + Address 26 = 32.
+
+
+ Endereço memória: 32 bits
+ Espaço nas inst. J: 26 bits
+
+
+ PC[0...3] + 26 bits na instrução tipo J + 00
+
+ Isto significa que a instrução de salto e o destino do salto têm que partilhar no seu endereço os primeiros 4 bits do PC.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
